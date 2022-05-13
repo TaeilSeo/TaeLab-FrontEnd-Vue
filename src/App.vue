@@ -6,7 +6,7 @@
 </template>
 
 <script>
-import HeaderNav from "@/components/HeaderNav.vue";
+import HeaderNav from "@/components/layout/HeaderNav.vue";
 
 export default {
   name: "App",
@@ -24,16 +24,16 @@ export default {
   margin: 0;
   font-family: "Spoqa Han Sans Neo", "sans-serif";
   box-sizing: border-box;
-  font-size: 18px;
+  /* font-size: 18px; */
 }
 
 a {
-  color: black;
-  text-decoration: none;
+  color: black !important;
+  text-decoration: none !important;
 }
 
 li {
-  list-style: none;
+  list-style: none !important;
 }
 
 #app {

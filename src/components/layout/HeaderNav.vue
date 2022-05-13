@@ -36,6 +36,11 @@ export default {
           path: "/health",
           desc: "건강 화면으로 이동",
         },
+        {
+          name: "Bootstrap",
+          path: "/bootstrap",
+          desc: "BootStrap 테스트 화면으로 이동",
+        },
       ],
     };
   },
@@ -46,7 +51,7 @@ export default {
 header {
   height: 8vh;
   line-height: 8vh;
-  background-color: blanchedalmond;
+  /* background-color: blanchedalmond; */
 }
 
 header ul {

@@ -22,20 +22,33 @@ export default {
 };
 </script>
 
-<style>
+<style scopded>
 main {
-  height: 92vh;
-  padding: 1vh 2vh;
+  /* height: 92vh;
+  padding: 1vh 2vh; */
+  padding: 20px;
 
-  background-color: burlywood;
+  /* background-color: burlywood; */
 }
 
 section {
-  height: 30vh;
+  /* height: 30vh; */
+  margin-bottom: 30px;
   padding: 20px;
 }
 
-h1 {
+/* h1 {
   font-size: 30px;
+  padding: 10px 0;
 }
+
+h2 {
+  font-size: 20px;
+  padding: 7px 0;
+}
+
+p {
+  font-size: 18px;
+  padding: 5px 0;
+} */
 </style>

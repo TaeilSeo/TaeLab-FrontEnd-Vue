@@ -1,15 +1,18 @@
 <template>
   <section>
-    <h1>Stock</h1>
+    <h1 class="pt-2 pb-2">오늘의 주식 소식</h1>
   </section>
 </template>
 
 <script>
-export default {};
+export default {
+  name: "StockSummary",
+  components: {},
+};
 </script>
 
 <style scoped>
 section {
-  background-color: coral;
+  /* background-color: coral; */
 }
 </style>

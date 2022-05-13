@@ -2,6 +2,7 @@ import Vue from "vue";
 import VueRouter from "vue-router";
 import HomeView from "@/views/HomeView.vue";
 import StockView from "@/views/StockView.vue";
+import BootstrapView from "@/views/BootstrapView.vue";
 
 Vue.use(VueRouter);
 
@@ -15,6 +16,16 @@ const routes = [
     path: "/stock",
     name: "home",
     component: StockView,
+  },
+  {
+    path: "/health",
+    name: "health",
+    component: StockView,
+  },
+  {
+    path: "/bootstrap",
+    name: "bootstrap",
+    component: BootstrapView,
   },
   // {
   //   path: "/about",
