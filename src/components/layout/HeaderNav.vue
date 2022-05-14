@@ -1,11 +1,22 @@
 <template>
   <header>
     <nav>
-      <ul>
-        <li v-for="(item, index) in items" :key="index">
-          <router-link :to="item.path">{{ item.name }}</router-link>
-        </li>
-      </ul>
+      <div class="container">
+        <div class="container-inner">
+          <!-- logo가 들어갈 자리. 후에 Home을 대체 -->
+          <div class="t-logo">
+            <router-link to="/">TaeLab</router-link>
+          </div>
+          <div></div>
+          <div>
+            <ul>
+              <li v-for="(item, index) in items" :key="index">
+                <router-link :to="item.path">{{ item.name }}</router-link>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
     </nav>
   </header>
 </template>
@@ -16,11 +27,6 @@ export default {
   data() {
     return {
       items: [
-        {
-          name: "Home",
-          path: "/",
-          desc: "홈 화면으로 이동",
-        },
         {
           name: "Stock",
           path: "/stock",
@@ -47,20 +53,49 @@ export default {
 };
 </script>
 
-<style>
+<style scoped>
 header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+
   height: 8vh;
   line-height: 8vh;
-  /* background-color: blanchedalmond; */
+  border-bottom: 2px lightgray solid;
+  background-color: white;
+
+  font-size: 18px;
 }
 
-header ul {
+.container-inner {
   display: flex;
+  justify-content: space-between;
+}
+
+header nav ul {
+  display: flex;
+  /* padding: 0 20px; */
+}
+
+header nav li {
   padding: 0 20px;
 }
 
-header li {
+header nav li > a {
+  color: #4e5968 !important;
+  font-weight: 500;
+  /* padding: 10px; */
+}
+
+.t-logo {
+  margin-right: 20px;
+
   font-size: 24px;
-  padding: 0 20px;
+  font-weight: bold;
+}
+
+.t-logo > a {
+  color: black !important;
 }
 </style>

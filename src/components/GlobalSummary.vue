@@ -1,7 +1,11 @@
 <template>
   <section>
-    <h1 class="pt-2 pb-2">오늘의 글로벌 소식</h1>
-    <global-news-list></global-news-list>
+    <div class="container container-padding">
+      <div class="container-inner">
+        <h1 class="pt-2 pb-2">지금 <span class="text-primary">세계</span>는</h1>
+        <global-news-list></global-news-list>
+      </div>
+    </div>
   </section>
 </template>
 
@@ -18,6 +22,6 @@ export default {
 
 <style scoped>
 section {
-  /* background-color: coral; */
+  background-color: #f9fafb;
 }
 </style>

@@ -17,4 +17,9 @@ export default {
 };
 </script>
 
-<style></style>
+<style scoped>
+li {
+  padding: 25px 0;
+  border-bottom: 1px lightgray solid;
+}
+</style>

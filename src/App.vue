@@ -27,8 +27,12 @@ export default {
   /* font-size: 18px; */
 }
 
+body {
+  /* padding-top: 8vh; */
+}
+
 a {
-  color: black !important;
+  color: black;
   text-decoration: none !important;
 }
 
@@ -37,7 +41,7 @@ li {
 }
 
 #app {
-  max-width: 1100px;
-  margin: 0 auto;
+  /* max-width: 1100px;
+  margin: 0 auto; */
 }
 </style>
