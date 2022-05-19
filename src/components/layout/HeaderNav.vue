@@ -11,7 +11,9 @@
           <div>
             <ul>
               <li v-for="(item, index) in items" :key="index">
-                <router-link :to="item.path">{{ item.name }}</router-link>
+                <router-link :to="{ name: item.name }">
+                  {{ item.name }}
+                </router-link>
               </li>
             </ul>
           </div>
@@ -28,25 +30,25 @@ export default {
     return {
       items: [
         {
-          name: "Stock",
+          name: "stock",
           path: "/stock",
           desc: "주식 화면으로 이동",
         },
         {
-          name: "Global",
+          name: "global",
           path: "/global",
           desc: "글로벌 화면으로 이동",
         },
-        {
-          name: "Health",
-          path: "/health",
-          desc: "건강 화면으로 이동",
-        },
-        {
-          name: "Bootstrap",
-          path: "/bootstrap",
-          desc: "BootStrap 테스트 화면으로 이동",
-        },
+        // {
+        //   name: "health",
+        //   path: "/health",
+        //   desc: "건강 화면으로 이동",
+        // },
+        // {
+        //   name: "bootstrap",
+        //   path: "/bootstrap",
+        //   desc: "BootStrap 테스트 화면으로 이동",
+        // },
       ],
     };
   },

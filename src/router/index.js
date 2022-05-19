@@ -1,7 +1,6 @@
 import Vue from "vue";
 import VueRouter from "vue-router";
 import HomeView from "@/views/HomeView.vue";
-import StockView from "@/views/StockView.vue";
 import BootstrapView from "@/views/BootstrapView.vue";
 
 Vue.use(VueRouter);
@@ -14,13 +13,26 @@ const routes = [
   },
   {
     path: "/stock",
-    name: "home",
-    component: StockView,
+    name: "stock",
+    component: () => import("@/views/StockView.vue"),
   },
   {
-    path: "/health",
-    name: "health",
-    component: StockView,
+    path: "/global",
+    name: "global",
+    component: () => import("@/views/GlobalView.vue"),
+    redirect: "/global/main",
+    children: [
+      {
+        path: "main",
+        name: "globalMainContent",
+        component: () => import("@/components/global/GlobalMainContent.vue"),
+      },
+      {
+        path: "news",
+        name: "globalNews",
+        component: () => import("@/components/global/GlobalNews.vue"),
+      },
+    ],
   },
   {
     path: "/bootstrap",
