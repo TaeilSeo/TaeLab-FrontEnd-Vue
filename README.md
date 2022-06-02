@@ -2,7 +2,7 @@
 
 ## build log
 ### 2022-06-02
-- Global News 등록 페이지
+- GlobalNewsRegister.vue
   + 구상도
   
 ![image](https://user-images.githubusercontent.com/100591243/171560765-2bf57b5f-136a-48f3-a468-3ae3e6080dff.png)
