@@ -44,4 +44,9 @@
       + 카테고리별 포션을 나타내야 함
       + 해당 차트가 차지할 수 있는 공간이 협소
       + Doughnut, Pie 등이 적합할 것으로 예상
+      + 서버로부터 news table의 category column을 기준으로 
   + https://vue-chartjs.org/ 사용
+  + 기본 sample 적용
+  
+    ![image](https://user-images.githubusercontent.com/100591243/172298084-703c96a2-afb8-463e-9376-3f6746b49cff.png)
+
