@@ -27,3 +27,10 @@
 #### GlobalNewsList.vue
 - api 변경
   + http.js => api/global.js
+
+### 2022-06-07
+#### GlobalNewsList.vue, GlobalNewsListItem.vue
+- props 설정
+  + 기존 카드뷰 형태를 default 값으로 설정
+  + type값으로 simple이 넘어올 경우, 사이드바에 보여줄 수 있는 간략한 형태로 ***GlobalNewsListItem.vue***를 보여주도록 설정
+  + 보다 더 높은 재사용성을 위함
