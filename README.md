@@ -1,6 +1,4 @@
 # taelab
-
-<<<<<<< HEAD
 ## Project setup
 
 ```
@@ -47,7 +45,7 @@ See [Configuration Reference](https://cli.vuejs.org/config/).
 
 헬스 관련 정보들을 기록·관리
 =======
-## build log
+## Dev Log
 ### 2022-06-02
 #### GlobalNewsRegister.vue
 - 구상도
