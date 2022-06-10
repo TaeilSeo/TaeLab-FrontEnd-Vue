@@ -96,5 +96,3 @@ See [Configuration Reference](https://cli.vuejs.org/config/).
   + 기본 sample 적용
   
     ![image](https://user-images.githubusercontent.com/100591243/172298084-703c96a2-afb8-463e-9376-3f6746b49cff.png)
-
->>>>>>> c4308e659116f0d84315d83c05e8bbb806de493e
