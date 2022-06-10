@@ -96,3 +96,8 @@ See [Configuration Reference](https://cli.vuejs.org/config/).
   + 기본 sample 적용
   
     ![image](https://user-images.githubusercontent.com/100591243/172298084-703c96a2-afb8-463e-9376-3f6746b49cff.png)
+   
+- - -
+### 2022-06-10
+#### GlobalNewsRegister.vue
+- 뉴스 등록 시, 최근 뉴스기사를 다시 불러오도록 설정
