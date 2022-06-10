@@ -1,17 +1,16 @@
 <template>
   <section>
-    <h2 class="pt-4 pb-4">글로벌 소식</h2>
-    <global-news-list></global-news-list>
+    <router-view></router-view>
   </section>
 </template>
 
 <script>
-import GlobalNewsList from "@/components/global/GlobalNewsList.vue";
+// import ComponentTitle from "@/components/layout/ComponentTitle.vue";
 
 export default {
   name: "GlobalNews",
   components: {
-    GlobalNewsList,
+    // ComponentTitle,
   },
 };
 </script>

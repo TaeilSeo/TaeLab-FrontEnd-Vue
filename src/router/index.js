@@ -31,6 +31,25 @@ const routes = [
         path: "news",
         name: "globalNews",
         component: () => import("@/components/global/GlobalNews.vue"),
+        redirect: "/global/news/list",
+        children: [
+          {
+            path: "list",
+            name: "globalNewsList",
+            component: () => import("@/components/global/GlobalNewsList.vue"),
+          },
+          {
+            path: "register",
+            name: "globalNewsRegister",
+            component: () =>
+              import("@/components/global/GlobalNewsRegister.vue"),
+          },
+        ],
+      },
+      {
+        path: "keyword",
+        name: "globalKeyword",
+        component: () => import("@/components/global/GlobalKeyword.vue"),
       },
     ],
   },

@@ -2,7 +2,7 @@
   <div class="container container-padding">
     <div class="container-inner">
       <main>
-        <h1 class="pt-4 pb-4">글로벌</h1>
+        <view-title title="글로벌"></view-title>
         <router-view></router-view>
       </main>
     </div>
@@ -10,14 +10,16 @@
 </template>
 
 <script>
+import ViewTitle from "@/components/layout/ViewTitle.vue";
 // import GlobalNewsList from "@/components/global/GlobalNewsList.vue";
 // import http from "@/api/http";
 
 export default {
   name: "GlobalView",
-  // components: {
-  //   // GlobalNewsList,
-  // },
+  components: {
+    ViewTitle,
+    // GlobalNewsList,
+  },
   // data() {
   //   return {
   //     articles: [],

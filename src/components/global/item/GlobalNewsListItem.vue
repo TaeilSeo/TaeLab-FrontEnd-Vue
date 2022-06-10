@@ -1,35 +1,43 @@
 <template>
   <li>
-    <!-- <article>
-      <h3 class="pt-2 pb-2">{{ title }}</h3>
-      <p class="text-secondary">{{ content }}</p>
-    </article> -->
-
-    <!-- <b-card :header="article.title" class="mt-4 mb-4">
-      <b-card-text>{{ article.content }}</b-card-text>
-    </b-card> -->
-
-    <article class="card mt-4 mb-4">
+    <article v-if="type === 'card'" class="card mt-4 mb-4">
       <div class="card-header font-weight-bold">
-        {{ title }}
-        <span class="text-secondary">{{ regdate }}</span>
+        {{ article.title }}
+        <span class="text-secondary">{{ article.coldate }}</span>
       </div>
       <div class="card-body">
         <p class="card-text">
-          {{ content }}
+          {{ article.content }}
         </p>
+      </div>
+    </article>
+    <article v-if="type === 'simple'" class="h-article-simple mt-3 mb-3">
+      <div>
+        {{ article.title }}
+      </div>
+      <div class="text-secondary text-right" style="font-size: 0.75rem">
+        {{ article.coldate | changeDateForm }}
       </div>
     </article>
   </li>
 </template>
 
 <script>
+import moment from "moment";
+
 export default {
   name: "GlobalNewsListItem",
   props: {
-    title: String,
-    content: String,
-    regdate: String,
+    type: {
+      type: String,
+      default: "card",
+    },
+    article: Object,
+  },
+  filters: {
+    changeDateForm(date) {
+      return moment(date).format("YYYY.MM.DD");
+    },
   },
 };
 </script>
