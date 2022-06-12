@@ -42,10 +42,11 @@ See [Configuration Reference](https://cli.vuejs.org/config/).
 - 내부 텝
 
 ### Health
+- 헬스 관련 정보들을 기록·관리
 
-헬스 관련 정보들을 기록·관리
-=======
-## Dev Log
+- - -
+
+# Dev Log
 ### 2022-06-02
 #### GlobalNewsRegister.vue
 - 구상도
@@ -96,6 +97,16 @@ See [Configuration Reference](https://cli.vuejs.org/config/).
     ![image](https://user-images.githubusercontent.com/100591243/172298084-703c96a2-afb8-463e-9376-3f6746b49cff.png)
    
 - - -
+
 ### 2022-06-10
 #### GlobalNewsRegister.vue
 - 뉴스 등록 시, 최근 뉴스기사를 다시 불러오도록 설정
+
+- - -
+
+### 2022-06-12
+#### GlobalNewsRegister.vue
+- side의 차트 값을 default 고정값이 아닌, DB 통계를 통해 동적으로 가져온 값으로 설정해야 했다.
+- created에 뉴스 분포값을 가져오는 메소드를 호출해 주도록 했다.
+- 그런데 최초 뉴스 등록 페이지 방문때는 차트가 보이지 않고, 새로고침 후에야 보이는 이슈가 발생했다. https://github.com/TaeilSeo/TaeLab-FrontEnd-Vue/issues/1#issue-1268683994
+
