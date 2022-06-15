@@ -110,3 +110,7 @@ See [Configuration Reference](https://cli.vuejs.org/config/).
 - created에 뉴스 분포값을 가져오는 메소드를 호출해 주도록 했다.
 - 그런데 최초 뉴스 등록 페이지 방문때는 차트가 보이지 않고, 새로고침 후에야 보이는 이슈가 발생했다. https://github.com/TaeilSeo/TaeLab-FrontEnd-Vue/issues/1#issue-1268683994
 
+### 2022-06-15
+#### ComponentTitle.vue
+- ComponentTitle.vue에서도 #1 이슈와 비슷한 warning이 보인다.
+- 비슷한 이유가 원인인 것으로 보인다.
