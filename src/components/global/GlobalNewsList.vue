@@ -35,8 +35,8 @@ export default {
   },
   props: {
     title: {
-      type: String,
       default: "글로벌 뉴스 목록",
+      type: String,
     },
     regShow: {
       type: Boolean,

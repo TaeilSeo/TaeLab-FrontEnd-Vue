@@ -1,5 +1,5 @@
 <template>
-  <div v-bind:class="[componentTitle, { small: this.size === 'small' }]">
+  <div>
     <h2 v-if="size === 'normal'">{{ title }}</h2>
     <h4 v-if="size === 'small'">{{ title }}</h4>
   </div>
@@ -17,6 +17,9 @@ export default {
       type: String,
       default: "normal",
     },
+  },
+  data() {
+    return {};
   },
 };
 </script>

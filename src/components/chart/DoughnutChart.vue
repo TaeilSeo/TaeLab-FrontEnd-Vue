@@ -73,15 +73,19 @@ export default {
       default: "",
       type: String,
     },
+    statsData: {
+      type: Object,
+      default: () => {},
+    },
   },
   data() {
     return {
       chartData: {
-        labels: ["VueJs", "EmberJs", "ReactJs", "AngularJs"],
+        labels: Object.keys(this.statsData),
         datasets: [
           {
-            backgroundColor: ["#41B883", "#E46651", "#00D8FF", "#DD1B16"],
-            data: [40, 20, 80, 10],
+            backgroundColor: ["#41B883", "#E46651"],
+            data: Object.values(this.statsData),
           },
         ],
       },

@@ -1,4 +1,8 @@
-import { selectCategory, selectArticle } from "@/api/global.js";
+import {
+  selectCategory,
+  selectArticle,
+  selectArticleDist,
+} from "@/api/global.js";
 
 const globalStore = {
   namespaced: true,
@@ -6,6 +10,7 @@ const globalStore = {
     categories: [],
     recentArticles: [],
     currentArticle: null,
+    articleDist: null,
     history: [],
   },
 
@@ -28,6 +33,27 @@ const globalStore = {
     CLEAR_CATEGORY_LIST: (state) => {
       state.categories = [];
     },
+
+    SET_ARTICLE_DIST: (state, articleDist) => {
+      let obj = {};
+
+      articleDist.forEach((dist) => {
+        obj[dist.name] = dist.cnt;
+      });
+
+      state.articleDist = obj;
+
+      // console.log("dist: ", articleDist);
+      // let obj = {
+      //   economy: 4,
+      //   market: 10,
+      // };
+      // state.articleDist = obj;
+    },
+
+    CLEAR_ARTICLE_DIST: (state) => {
+      state.articleDist = null;
+    },
   },
 
   actions: {
@@ -47,6 +73,17 @@ const globalStore = {
         params,
         ({ data }) => {
           commit("SET_RECENT_ARTICLE_LIST", data);
+        },
+        (error) => {
+          console.log(error);
+        },
+      );
+    },
+
+    getArticleDist: ({ commit }) => {
+      selectArticleDist(
+        ({ data }) => {
+          commit("SET_ARTICLE_DIST", data);
         },
         (error) => {
           console.log(error);

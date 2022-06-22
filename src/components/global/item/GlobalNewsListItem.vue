@@ -3,11 +3,13 @@
     <article v-if="type === 'card'" class="card mt-4 mb-4">
       <div class="card-header font-weight-bold">
         {{ article.title }}
-        <span class="text-secondary">{{ article.coldate }}</span>
+        <span class="text-secondary">{{
+          article.coldate | changeDateForm
+        }}</span>
       </div>
       <div class="card-body">
         <p class="card-text">
-          {{ article.content }}
+          {{ article.content | cutContent }}
         </p>
       </div>
     </article>
@@ -37,6 +39,13 @@ export default {
   filters: {
     changeDateForm(date) {
       return moment(date).format("YYYY.MM.DD");
+    },
+    cutContent(content) {
+      if (content.length > 250) {
+        return content.slice(0, 280) + "...";
+      } else {
+        return content;
+      }
     },
   },
 };

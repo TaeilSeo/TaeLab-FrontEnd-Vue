@@ -88,6 +88,7 @@
         <doughnut-chart
           title="뉴스 통계"
           size="small"
+          :stats-data="articleDist"
           :width="250"
           :height="250"
           :styles="chartStyle"
@@ -146,14 +147,19 @@ export default {
   },
   computed: {
     // ...mapState(userStore, ["loginUser"]),
-    ...mapState(globalStore, ["categories"]),
+    ...mapState(globalStore, ["categories", "articleDist"]),
   },
   created() {
     this.CLEAR_CATEGORY_LIST();
     this.getCategoryList();
+    this.getArticleDist();
   },
   methods: {
-    ...mapActions(globalStore, ["getCategoryList", "getRecentArticleList"]),
+    ...mapActions(globalStore, [
+      "getCategoryList",
+      "getRecentArticleList",
+      "getArticleDist",
+    ]),
     ...mapMutations(globalStore, ["CLEAR_CATEGORY_LIST"]),
     onSubmit(event) {
       event.preventDefault();
@@ -191,11 +197,13 @@ export default {
             msg = "등록이 완료되었습니다.";
           }
           alert(msg);
-
-          this.getRecentArticleList({ cnt: 5 });
         },
         (error) => {
           console.log(error);
+        },
+        () => {
+          this.getRecentArticleList({ cnt: 5 });
+          this.getArticleDist();
         },
       );
     },
