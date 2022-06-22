@@ -1,6 +1,4 @@
 # taelab
-
-<<<<<<< HEAD
 ## Project setup
 
 ```
@@ -44,10 +42,11 @@ See [Configuration Reference](https://cli.vuejs.org/config/).
 - 내부 텝
 
 ### Health
+- 헬스 관련 정보들을 기록·관리
 
-헬스 관련 정보들을 기록·관리
-=======
-## build log
+- - -
+
+# Dev Log
 ### 2022-06-02
 #### GlobalNewsRegister.vue
 - 구상도
@@ -96,5 +95,24 @@ See [Configuration Reference](https://cli.vuejs.org/config/).
   + 기본 sample 적용
   
     ![image](https://user-images.githubusercontent.com/100591243/172298084-703c96a2-afb8-463e-9376-3f6746b49cff.png)
+   
+- - -
 
->>>>>>> c4308e659116f0d84315d83c05e8bbb806de493e
+### 2022-06-10
+#### GlobalNewsRegister.vue
+- 뉴스 등록 시, 최근 뉴스기사를 다시 불러오도록 설정
+
+- - -
+
+### 2022-06-12
+#### GlobalNewsRegister.vue
+- side의 차트 값을 default 고정값이 아닌, DB 통계를 통해 동적으로 가져온 값으로 설정해야 했다.
+- created에 뉴스 분포값을 가져오는 메소드를 호출해 주도록 했다.
+- 그런데 최초 뉴스 등록 페이지 방문때는 차트가 보이지 않고, 새로고침 후에야 보이는 이슈가 발생했다. https://github.com/TaeilSeo/TaeLab-FrontEnd-Vue/issues/1#issue-1268683994
+
+- - -
+
+### 2022-06-15
+#### ComponentTitle.vue
+- ComponentTitle.vue에서도 #1 이슈와 비슷한 warning이 보인다.
+- 비슷한 이유가 원인인 것으로 보인다.
